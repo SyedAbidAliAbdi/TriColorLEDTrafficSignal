@@ -1,59 +1,53 @@
-const int RED_PIN_NORTH = 1;
-const int GREEN_PIN_NORTH = 2;
-const int RED_PIN_SOUTH = 4;
-const int GREEN_PIN_SOUTH = 5;
+// Define pin connections
+const int redA = 1;  // East-West red light
+const int greenA = 2;  // East-West green light
+const int redB = 4;  // North-South red light
+const int greenB = 5;  // North-South green light
 
 void setup() {
-  pinMode(RED_PIN_NORTH, OUTPUT);
-  pinMode(GREEN_PIN_NORTH, OUTPUT);
-  pinMode(RED_PIN_SOUTH, OUTPUT);
-  pinMode(GREEN_PIN_SOUTH, OUTPUT);
+  // Initialize pin modes
+  pinMode(redA, OUTPUT);
+  pinMode(greenA, OUTPUT);
+  pinMode(redB, OUTPUT);
+  pinMode(greenB, OUTPUT);
 }
 
 void loop() {
-  // North red, south green
-  digitalWrite(RED_PIN_NORTH, HIGH);
-  digitalWrite(GREEN_PIN_NORTH, LOW);
-  digitalWrite(RED_PIN_SOUTH, LOW);
-  digitalWrite(GREEN_PIN_SOUTH, HIGH);
-  delay(10000);
+  // Initial state: A is red, B is green
+  digitalWrite(redA, HIGH);
+  digitalWrite(greenB, HIGH);
+  delay(20000);
 
-  // South yellow
-  digitalWrite(RED_PIN_SOUTH, HIGH);
-  digitalWrite(GREEN_PIN_SOUTH, HIGH);
-  delay(1500);
+  // B turns yellow
+  digitalWrite(greenB, HIGH);
+  digitalWrite(redB, HIGH);
+  delay(3000);
 
-  // South red, north yellow
-  digitalWrite(RED_PIN_SOUTH, HIGH);
-  digitalWrite(GREEN_PIN_SOUTH, LOW);
-  digitalWrite(RED_PIN_NORTH, HIGH);
-  digitalWrite(GREEN_PIN_NORTH, HIGH);
-  delay(1500);
+  // B turns red, A turns yellow
+  digitalWrite(greenB, LOW);
+  digitalWrite(redB, HIGH);
+  digitalWrite(redA, HIGH);
+  digitalWrite(greenA, HIGH);
+  delay(3000);
 
-  // North green
-  digitalWrite(RED_PIN_NORTH, LOW);
-  digitalWrite(GREEN_PIN_NORTH, HIGH);
-  delay(10000);
+  // A turns green
+  digitalWrite(redA, LOW);
+  digitalWrite(greenA, HIGH);
+  delay(20000);
 
-  // Reverse process
-  // North yellow, south red
-  digitalWrite(RED_PIN_NORTH, HIGH);
-  digitalWrite(GREEN_PIN_NORTH, HIGH);
-  digitalWrite(RED_PIN_SOUTH, HIGH);
-  digitalWrite(GREEN_PIN_SOUTH, LOW);
-  delay(1500);
+  // A turns yellow
+  digitalWrite(redA, HIGH);
+  digitalWrite(greenA, HIGH);
+  delay(3000);
 
-  // North red, south yellow
-  digitalWrite(RED_PIN_NORTH, HIGH);
-  digitalWrite(GREEN_PIN_NORTH, LOW);
-  digitalWrite(RED_PIN_SOUTH, HIGH);
-  digitalWrite(GREEN_PIN_SOUTH, HIGH);
-  delay(1500);
+  // A turns red, B turns yellow
+  digitalWrite(redA, HIGH);
+  digitalWrite(greenA, LOW);
+  digitalWrite(redB, HIGH);
+  digitalWrite(greenB, HIGH);
+  delay(3000);
 
-  // South green, north red
-  digitalWrite(RED_PIN_SOUTH, LOW);
-  digitalWrite(GREEN_PIN_SOUTH, HIGH);
-  digitalWrite(RED_PIN_NORTH, HIGH);
-  digitalWrite(GREEN_PIN_NORTH, LOW);
-  delay(10000);
+  // B turns green
+  digitalWrite(redB, LOW);
+
 }

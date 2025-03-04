@@ -1,6 +1,6 @@
 # Tri Color LED Traffic Signal
 4 way Tri Color LED Signals to control 2 Ways Traffic. <br/>
-it is design to Manage 2 Directional traffice  by using Tri Color LED to Save Space and cutting cost of extra LED. Initially it is design and programmed with ATTiny85 on **www.wokwi.com** 
+it is design to Manage 2 Directional traffice  by using Tri Color LED to Save Space and cutting cost of extra LED. Initially it is design and programmed with ATTiny85 on **[www.wokwi.com](https://wokwi.com/projects/422129132434506753)** 
 
 **Atmel At Tiny 85**
 ![image](https://github.com/user-attachments/assets/ac2b72b3-264b-4845-ae74-a922bf764239)

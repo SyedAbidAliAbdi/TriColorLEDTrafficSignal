@@ -1,4 +1,4 @@
-# Tri Color LED Traffic Signal
+# Tri Color LED Bi-Directional Traffic Signal
 4 way Tri Color LED Signals to control 2 Ways Traffic. <br/>
 it is design to Manage 2 Directional traffice  by using Tri Color LED to Save Space and cutting cost of extra LED. Initially it is design and programmed with ATTiny85 on **[www.wokwi.com](https://wokwi.com/projects/422129132434506753)** 
 
